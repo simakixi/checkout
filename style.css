@@ -1,0 +1,32 @@
+#count{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.count{
+    background-color: lightblue;
+    border: 1px solid blue;
+    padding: 20px;
+    text-align: center;
+}
+
+.plus{
+    background-color: lightblue;
+    border: 1px solid blue;
+    padding: 20px;
+    text-align: center;
+}
+
+.minus{
+    background-color: lightblue;
+    border: 1px solid blue;
+    padding: 20px;
+    text-align: center;
+}
+
+#menu{
+    
+}
