@@ -35,6 +35,12 @@ function Createmenu(){
         count.addEventListener("input",function(event){
             change(event.target.id,event.target.value);
         });
+        count.addEventListener("blur",function(event){
+            if(event.target.value == "" || isNaN(event.target.value)){
+                event.target.value = "0";
+            }
+            change(event.target.id,event.target.value);
+        });
         countdiv.appendChild(count);
 
         let minus = document.createElement("span");

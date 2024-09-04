@@ -1,32 +1,51 @@
 #count{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-gap: 0px;
     padding: 10px;
-    border: 2px solid black;
 }
 
 .count{
-    background-color: lightblue;
-    border: 1px solid blue;
+    background-color: white;
+    border: 1px solid black;
+    border-right: none;
+    border-left: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.plus{
+    background-color: pink;
+    border: 1px solid black;
     padding: 20px;
     text-align: center;
 }
 
-.plus{
-    background-color: lightblue;
-    border: 1px solid blue;
-    padding: 20px;
-    text-align: center;
+.plus:hover{
+    background-color: #FFB6C1;
+    cursor: pointer;
 }
 
 .minus{
     background-color: lightblue;
-    border: 1px solid blue;
+    border: 1px solid black;
     padding: 20px;
     text-align: center;
 }
 
+.minus:hover{
+    background-color: #87CEFA;
+    cursor: pointer;
+}
+
 #menu{
-    
+    border: 2px solid black;
+    padding: 10px;
+    font-size:24px;
+    font-weight: bold;
+    width: 400px;
+    height: 200px;
+    margin:10px;
 }
