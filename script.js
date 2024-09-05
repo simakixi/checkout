@@ -77,6 +77,22 @@ function Createmenu(){
 
         list.appendChild(div);
     }
+    let checkout = document.createElement("div");
+    checkout.id = "checkout";
+    list.appendChild(checkout);
+
+    let totalprice = document.createElement("p");
+    totalprice.textContent = "0円";
+    totalprice.id = "total";
+    checkout.appendChild(totalprice);
+
+    let check = document.createElement("p");
+    check.textContent = "お会計";
+    check.id = "check";
+    check.addEventListener("click",function(event){
+        check();
+    });
+    checkout.appendChild(check);
 }
 
 function increase(i){
@@ -104,4 +120,13 @@ function update(){
     for(let i=0;i<menu;i++){
         document.getElementById("count"+i).value = amount[i];
     }
+    let total = 0;
+    for(let i=0;i<menu;i++){
+        total += price[i]*amount[i];
+    }
+        document.getElementById("total").innerHTML = total+"円";
+}
+
+function check(){
+
 }
