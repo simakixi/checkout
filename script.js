@@ -1,16 +1,39 @@
-let product = ["ぎょうざ","ぎょーざ","ギョウザ","餃子","アルティメット餃子"];   //商品名を格納
-let price = [10,100,1000,10000,100000]; //値段を確認
+let product = ["ぎょうざ","ギョウザ","餃子","スーパー餃子","アルティメット餃子","緑茶","綾鷹","お～いお茶","Monster","ドリンクセット"];   //商品名を格納
+let price = [10,100,1000,10000,100000,100,500,200,1000,50000]; //値段を確認
 let amount = [];
 let menu = product.length;
+let drink = 5;  //ドリンクが始まる要素番号
+let set = 9;    //セットメニューが始まる要素番号
 
 Createmenu();
 function Createmenu(){
+    let list = document.createElement("div");
+    list.id = "list";
+    document.body.appendChild(list);
+    let title = document.createElement("h1");
+    title.textContent = "メニュー";
+    list.appendChild(title);
+    title = document.createElement("h2");
+    title.textContent = "料理";
+    list.appendChild(title);
     for(let i=0;i<menu;i++){
+        if(drink==i){
+            title = document.createElement("h2");
+            title.textContent = "ドリンク";
+            list.appendChild(title);
+        }else if(set==i){
+            title = document.createElement("h2");
+            title.textContent = "セットメニュー";
+            list.appendChild(title);
+        }
         let div = document.createElement("div");
         div.id = "menu";
-        let productname = document.createTextNode(product[i]);
-        div.appendChild(productname);
-        let productprice = document.createTextNode("¥"+price[i]);
+        let productname = document.createElement("p");
+        productname.textContent = product[i];
+        div.appendChild(productname);        
+        let productprice = document.createElement("p");
+        productprice.textContent = price[i]+"円";
+        productprice.id = "price";
         div.appendChild(productprice);
 
         amount.push(0);
@@ -37,7 +60,7 @@ function Createmenu(){
         });
         count.addEventListener("blur",function(event){
             if(event.target.value == "" || isNaN(event.target.value)){
-                event.target.value = "0";
+                event.target.value = 0;
             }
             change(event.target.id,event.target.value);
         });
@@ -52,8 +75,7 @@ function Createmenu(){
         });
         countdiv.appendChild(minus);
 
-
-        document.body.appendChild(div);
+        list.appendChild(div);
     }
 }
 

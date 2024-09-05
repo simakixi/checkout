@@ -1,8 +1,28 @@
+.img{
+    height: 100%;
+    width: 100%;
+}
+
+.logo{
+    float:left;
+    height: 100vh;
+    width: 33vw;
+    position: relative;
+    background-color: white;
+    margin-left: -1%;
+    margin-top: -1%;
+}
+
+body{
+    background-color: antiquewhite;
+    display: flex;
+}
+
 #count{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
     grid-gap: 0px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .count{
@@ -10,16 +30,16 @@
     border: 1px solid black;
     border-right: none;
     border-left: none;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .plus{
     background-color: pink;
     border: 1px solid black;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -31,7 +51,7 @@
 .minus{
     background-color: lightblue;
     border: 1px solid black;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -41,11 +61,42 @@
 }
 
 #menu{
-    border: 2px solid black;
     padding: 10px;
-    font-size:24px;
+    font-size:16px;
     font-weight: bold;
-    width: 400px;
-    height: 200px;
     margin:10px;
+    margin-left: 20%;
+    display: flex;
+    margin-top: -60px;
+}
+
+h1{
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Hiragino Mincho Pro', 'Hiragino Maru Gothic Pro', 'MS PMincho', 'MS Gothic', serif;
+    margin-bottom: 5%;
+}
+
+p{
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Hiragino Mincho Pro', 'Hiragino Maru Gothic Pro', 'MS PMincho', 'MS Gothic', serif;
+    font-weight: bold;
+}
+
+#list{
+    flex:1;
+}
+
+#price{
+    margin-left: auto;
+}
+
+h2{
+    margin-top: -3%;
+    text-align: center;
+    font-size: 32px;
+    border-bottom: 1px solid black;
+    margin-bottom: 5%;
+    font-family: 'Hiragino Mincho Pro', 'Hiragino Maru Gothic Pro', 'MS PMincho', 'MS Gothic', serif;
 }
