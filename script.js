@@ -90,7 +90,7 @@ function Createmenu(){
     check.textContent = "お会計";
     check.id = "check";
     check.addEventListener("click",function(event){
-        check();
+        payment();
     });
     checkout.appendChild(check);
 }
@@ -127,6 +127,10 @@ function update(){
         document.getElementById("total").innerHTML = total+"円";
 }
 
-function check(){
+function payment(){
+    document.getElementById("payment").classList.remove("hidden");
+}
 
+document.getElementById("close").onclick = function(){
+    document.getElementById("payment").classList.add("hidden");
 }
