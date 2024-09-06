@@ -32,7 +32,7 @@ body{
     border-left: none;
     padding: 5px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -62,7 +62,7 @@ body{
 
 #menu{
     padding: 10px;
-    font-size:16px;
+    font-size:18px;
     font-weight: bold;
     margin:10px;
     margin-left: 20%;
@@ -164,8 +164,25 @@ h2{
 
 .pay{
     border: 1px solid black;
-    width: 25%;
-    height: 25%;
     margin: 10px;
     text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.pay p{
+    margin-top: -5%;
+}
+
+.paygrid{
+    display: grid;
+    grid-template-columns: repeat(2,20vw);
+    grid-template-rows: repeat(3,20vw);
+    gap: 10px;
+    margin-top: 5%;
+    justify-content: center;
+    align-content:center;
 }
