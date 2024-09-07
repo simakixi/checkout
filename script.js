@@ -1,9 +1,12 @@
-let product = ["ぎょうざ","ギョウザ","餃子","スーパー餃子","アルティメット餃子","緑茶","綾鷹","お～いお茶","Monster","ドリンクセット"];   //商品名を格納
+//商品名を上から配列に入れる
+let product = ["ぎょうざ","ギョウザ","餃子","スーパー餃子","アルティメット餃子","緑茶","綾鷹","お～いお茶","Monster","ドリンクセット"];
+//商品の値段を上から配列に入れる
 let price = [10,100,1000,10000,100000,100,500,200,1000,50000]; //値段を確認
 let amount = [];
 let menu = product.length;
-let drink = 5;  //ドリンクが始まる要素番号
-let set = 9;    //セットメニューが始まる要素番号
+let drink = 5;  //ドリンクが始まる要素番号(使わない場合は適当に大きな数字)
+let set = 9;    //セットメニューが始まる要素番号(使わない場合は適当に大きな数字)
+var total = 0;
 
 Createmenu();
 function Createmenu(){
@@ -120,17 +123,46 @@ function update(){
     for(let i=0;i<menu;i++){
         document.getElementById("count"+i).value = amount[i];
     }
-    let total = 0;
+    total = 0;
     for(let i=0;i<menu;i++){
         total += price[i]*amount[i];
     }
         document.getElementById("total").innerHTML = total+"円";
 }
 
-function payment(){
+document.getElementById("close").onclick = function(){
+    document.getElementById("payment").classList.add("hidden");
+}
+
+
+function payment(){     //会計を押したときの処理
     document.getElementById("payment").classList.remove("hidden");
 }
 
-document.getElementById("close").onclick = function(){
-    document.getElementById("payment").classList.add("hidden");
+
+//ここから支払方法の処理(今は適当にalert入れてます)
+//totalが購入金額(変更しても大丈夫です)
+
+function cash(){    //現金での支払い
+    alert("現金で"+total+"円の支払い");
+}
+
+function Credit(){  //クレジットカードまたはデビットカードでの支払い
+    alert("クレジットカードまたはデビットカードで"+total+"円の支払い");
+}
+
+function traffic(){ //交通系ICでの支払い
+    alert("交通系ICで"+total+"円の支払い");
+}
+
+function QUICPay(){ //QUICPayでの支払い
+    alert("QUICPayで"+total+"円の支払い");
+}
+
+function iD(){  //iDでの支払い
+    alert("iDで"+total+"円の支払い");
+}
+
+function PayPay(){    //PayPayでの支払い
+    alert("PayPayで"+total+"円の支払い");
 }
